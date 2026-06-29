@@ -334,7 +334,7 @@ else:
     # === CORREÇÃO: Tratamento visual de falhas de coleta ===
     if "status" in df_show.columns and "score_total" in df_show.columns:
         mask_falha = df_show["status"] == "falha_coleta"
-        df_show.loc[mask_falha, "score_total"] = "N/A"
+        # df_show.loc[mask_falha, "score_total"] = "N/A"
         df_show.loc[mask_falha, "classificacao"] = "Não avaliável"
         df_show.loc[mask_falha, "nivel_exclusao"] = "Falha na coleta de HTML"
 
